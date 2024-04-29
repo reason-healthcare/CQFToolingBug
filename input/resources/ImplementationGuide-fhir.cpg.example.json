@@ -1,0 +1,74 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "fhir.cpg.example",
+  "url": "http://example.org/fhir/cpg/ImplementationGuide/fhir.cpg.example",
+  "version": "0.1.0",
+  "name": "CpgExampleIG",
+  "status": "draft",
+  "publisher": "Example Publisher",
+  "contact": [
+    {
+      "name": "Example Publisher",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://example.org/example-publisher"
+        }
+      ]
+    }
+  ],
+  "packageId": "fhir.cpg.example",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.cpg",
+      "version": "1.0.0",
+      "uri": "http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg",
+      "id": "hl7_fhir_uv_cpg"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Library/ExampleLibrary"
+        },
+        "name": "Example Library",
+        "description": "Example Library",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2023+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "path-binary",
+        "value": "./input/cql"
+      }
+    ]
+  }
+}
